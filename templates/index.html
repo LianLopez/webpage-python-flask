@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block head %}
+{{super ()}}
+<link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+{% endblock %}
+
+{% block title %}
+Index
+{% endblock %}
+
+{% block header %}
+<div class="header">
+    <h5>¿Necesita clientes y no sabes como? ¿No sabes como unirse al mundo digital? ¿No tienes tiempo suficiente para
+        hacer
+        tu pagina?</h5>
+    <h1>¡Pida su pagina web ya!</h1>
+    <button>¡Click Acá!</button>
+</div>
+<img src="{{ url_for('static', filename='svg/wave.svg') }}" alt="">
+{% endblock %}
+
+
+{% block content %}
+
+<div class="content-svg">
+    <img src="{{ url_for('static', filename='svg/People Talking Illustration.svg') }}" alt="Gente hablando"
+        height="100%">
+    <div>
+        <h2>¡Llegue a mas clientes publicitando sus productos o servicios en la WEB! </h2>
+    </div>
+</div>
+
+
+{% endblock %}
