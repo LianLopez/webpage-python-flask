@@ -1,7 +1,70 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
 }
 
+.animation {
+  transition: opacity 1000ms ease;
+}
+.noCarga {
+  opacity: 0;
+}
+
+/* HEADER */
+
+header {
+  background: rgb(124, 156, 191);
+  background: linear-gradient(
+    90deg,
+    rgba(124, 156, 191, 1) 0%,
+    rgba(65, 140, 218, 1) 25%,
+    rgba(11, 212, 11, 1) 100%
+  );
+}
+
+/* NAV */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+nav .links a {
+  margin: 0 20px;
+  color: white;
+  text-decoration: none;
+  transition: border-bottom 0.3 ease-in;
+  position: relative;
+  font-weight: 600;
+  text-shadow: 2px 2px 5px black;
+}
+
+nav .links a::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  bottom: -20%;
+  left: 0%;
+  border-radius: 20px;
+  transition: all 500ms ease;
+}
+
+nav .links a:hover::after {
+  width: 100%;
+}
+
+.logoText{
+  color: white;
+  font-weight: 700px;
+  font-size: 2em;
+  text-shadow: 3px 3px 5px black;
+}
+
+.logoText:hover{
+  text-decoration: none;
+  color: white;
+}

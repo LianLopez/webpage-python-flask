@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href=" {{ url_for('static', filename='css/main.css') }} " />
     <link rel="stylesheet" href=" {{ url_for('static', filename='css/nav.css') }} " />
     <link rel="stylesheet" href=" {{ url_for('static', filename='css/footer.css') }} " />
@@ -14,18 +15,29 @@
     {% endblock %}
 </head>
 
-<body>
-    
+<body onload="mostrar()" class=" noCarga animation" id="body">
+
     <header>
         <nav>
-        <img src="{{url_for('static', filename='img/logo.png')}}" alt="logo" height="110px">
+            <a href="/" class="logoText"><img src="{{url_for('static', filename='img/logo.png')}}" alt="logo" height="110px">LianLpz</a>
+            <div class="links">
+                <a href="/">Inicio</a>
+                <a href="/Servicios">Servicios</a>
+                <a href="/Sobre-nosotros">Sobre nosotros</a>
+                <a href="/contact">Contacto</a>
+            </div>
         </nav>
         {% block header %}{% endblock %}
     </header>
-    <div class="container">
+    <div class="contenedor">
         {% block content %}{% endblock %}
     </div>
     <footer></footer>
+    <script>
+        function mostrar(){
+            document.getElementById("body").classList.remove("noCarga");
+        }
+    </script>
 </body>
 
 </html>
